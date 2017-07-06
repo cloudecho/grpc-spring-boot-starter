@@ -4,3 +4,6 @@ build
 *.iml
 **/generated
 classes
+out/
+target/
+.DS_Store
