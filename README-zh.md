@@ -18,6 +18,10 @@ Java技术交流群：294712648 <a target="_blank" href="http://shang.qq.com/wpa
 
 支持 keepalive
 
+## Build
+* Maven - since walter branch
+* Gradle
+
 ## 使用方式
 
 ### gRPC 服务端
