@@ -1,6 +1,22 @@
 # gRPC spring boot starter Examples
 
 ## Local Mode
+### If Maven
+1. Try the local-grpc-server example first run:
+
+    ````
+    cd examples/local-grpc-client/
+    mvn spring-boot:run
+    ````
+
+2. In a different terminal window run:
+
+    ````
+    cd examples/local-grpc-server/
+    mvn spring-boot:run
+    ````
+
+### If Gradle
 1. Try the local-grpc-server example first run:
 
     ````
@@ -12,7 +28,7 @@
     ````
     ./gradlew :example:local-grpc-client:bootRun
     ````
-
+### Finally
 visit http://localhost:8080/ can see result.
 
 ## Cloud Mode
