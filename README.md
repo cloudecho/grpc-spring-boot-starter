@@ -117,7 +117,7 @@ grpc.client.(gRPC server name).port[0]=
 | 1.0.0.RELEASE    | 1.0.3              |
 
 ## Show case
-https://github.com/yidongnan/grpc-spring-boot-starter/tree/master/examples
+[Example](./examples)
 
 ## Credits
 - [saturnism](https://github.com/saturnism/spring-boot-starter-grpc)
