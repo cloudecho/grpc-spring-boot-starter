@@ -1,12 +1,11 @@
 package net.devh.examples.grpc.local;
 
 
+import io.grpc.stub.StreamObserver;
 import net.devh.examples.grpc.lib.HelloReply;
 import net.devh.examples.grpc.lib.HelloRequest;
 import net.devh.examples.grpc.lib.SimpleGrpc;
 import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
-
-import io.grpc.stub.StreamObserver;
 
 /**
  * User: Michael
