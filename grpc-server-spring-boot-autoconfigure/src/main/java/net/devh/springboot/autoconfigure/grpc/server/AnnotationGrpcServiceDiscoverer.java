@@ -3,6 +3,8 @@ package net.devh.springboot.autoconfigure.grpc.server;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.context.ApplicationContext;
@@ -26,7 +28,6 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class AnnotationGrpcServiceDiscoverer implements ApplicationContextAware, GrpcServiceDiscoverer {
-
     private ApplicationContext applicationContext;
 
     @Override

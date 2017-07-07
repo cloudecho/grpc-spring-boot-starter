@@ -16,6 +16,12 @@
 
     <properties>
         <java.version>1.7</java.version>
+        <lombok.version>1.16.18</lombok.version>
+        <spring-cloud-sleuth-core>1.2.0.RELEASE</spring-cloud-sleuth-core>
+        <eureka-client.version>1.6.2</eureka-client.version>
+        <spring-cloud-consul-discovery.version>1.2.0.RELEASE</spring-cloud-consul-discovery.version>
+        <spring-cloud-commons.version>1.2.0.RELEASE</spring-cloud-commons.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
     </properties>
 
     <modules>
@@ -27,21 +33,22 @@
     </modules>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.2.5.RELEASE</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>1.2.5.RELEASE</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencies>
@@ -53,11 +60,41 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
-
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-sleuth-core</artifactId>
+                <version>${spring-cloud-sleuth-core}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.eureka</groupId>
+                <artifactId>eureka-client</artifactId>
+                <version>${eureka-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-consul-discovery</artifactId>
+                <version>${spring-cloud-consul-discovery.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-commons</artifactId>
+                <version>${spring-cloud-commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

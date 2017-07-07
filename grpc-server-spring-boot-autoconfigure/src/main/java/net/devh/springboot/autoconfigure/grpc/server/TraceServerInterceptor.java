@@ -1,5 +1,7 @@
 package net.devh.springboot.autoconfigure.grpc.server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.sleuth.Span;
 import org.springframework.cloud.sleuth.SpanExtractor;
 import org.springframework.cloud.sleuth.Tracer;
@@ -20,7 +22,6 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class TraceServerInterceptor implements ServerInterceptor {
-
     private Tracer tracer;
 
     private SpanExtractor<Metadata> spanExtractor;

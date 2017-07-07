@@ -10,6 +10,8 @@ import java.util.List;
 import io.grpc.Server;
 import io.grpc.netty.NettyServerBuilder;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * User: Michael
@@ -18,7 +20,6 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class NettyGrpcServerFactory implements GrpcServerFactory {
-
     private final GrpcServerProperties properties;
     private final List<GrpcServiceDefinition> services = Lists.newLinkedList();
 
